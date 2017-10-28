@@ -1,8 +1,5 @@
 {% extends 'base.html' %}
   {% block body %}
-
-<h1>Trusts Form</h1>
-<p>Add Details of the organisations who need donation</p>
 <form  role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}

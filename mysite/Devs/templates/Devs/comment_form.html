@@ -1,8 +1,12 @@
-{% extends 'base.html' %}
-  {% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 
-<h1>Trusts Form</h1>
-<p>Add Details of the organisations who need donation</p>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
 <form  role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
@@ -19,4 +23,5 @@
 
 </form>
 
-{% endblock %}
+</body>
+</html>

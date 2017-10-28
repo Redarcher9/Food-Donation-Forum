@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+  {% block body %}
+  <div class="page-header">
+    <h1>Sign up </h1>
+    <h1><small>Volunter yourself and Be a part of our Community.<small></h1>
+  </div>
+
+<form method="post">
+  {% csrf_token %}
+  {% for field in form %}
+    <p>
+      {{ field.label_tag }}<br>
+      {{ field }}
+      {% if field.help_text %}
+        <small style="color: grey">{{ field.help_text }}</small>
+      {% endif %}
+      {% for error in field.errors %}
+        <p style="color: red">{{ error }}</p>
+      {% endfor %}
+    </p>
+  {% endfor %}
+  
+    <div class="btn-group">
+        <button class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-log-in"></span>   Sign Up</button>
+    </div>
+
+</form>
+{% endblock %}
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+
+
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="Devs/style2.css">
+
+<div class="container">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<!-- Contenedor Principal -->
+
+
+        <h1 >{{post.author}}<h6><span>posted on {{post.date}}</span></h6></h1>
+
+
+
+      <p>
+        <h2>{{post.title}}:</h2>
+        <h3>{{post.content}}</h3>
+      </p>
+
+
+
+
+				<!-- Respuestas de los comentarios -->
+
+
+
+<h1> Comments </h1>
+
+
+
+  {% for comment in post.comment_set.all %}
+
+
+      <div class ="card">
+      <div class="comment-main-level">
+        <!-- Avatar -->
+        <div class="comment-box">
+          <div class="comment-head">
+            <h6 class="comment-name by-author">{{comment.user1}}</h6>
+            <span>{{comment.date}}</span>
+
+          </div>
+          <div class="comment-content">
+            {{comment.context}}
+        </div>
+      </div>
+    </div>
+      <!-- Respuestas de los comentarios -->
+
+</div>
+
+
+
+  {% endfor %}
+
+
+<p><a href = "{% url 'Devs:createcomment' post.id %}"> AddComment </a></p>
+
+
+
+{% endblock %}

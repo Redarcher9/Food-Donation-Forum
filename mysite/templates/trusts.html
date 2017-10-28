@@ -44,13 +44,13 @@ button:hover, a:hover {
 
 <h2 style="text-align:center">User Profile Card</h2>
 <ul>
-  {% for developers in all_developers %}
+  {% for trusts in all_trusts %}
 <div class="card">
-  <img src="{{developers.photo}}" alt="John" style="width:100%">
-  <h1>{{developers.name}}</h1>
-  <p class="title">{{developers.Designation}}</p>
-  <p>Contact Number {{developers.contact_num}}</p>
-  <p>Email id: {{developers.email}}</p>
+
+  <h1>{{trusts.name}}</h1>
+  <p class="title">{{trusts.contact_num}}</p>
+  <p>Contact Number {{trusts.Street_Addresss}}</p>
+  <p>Email id: {{trusts.Locality}}</p>
   <div style="margin: 46px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a>
     <a href="#"><i class="fa fa-twitter"></i></a>

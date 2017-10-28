@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="Devs/style2.css">
+
+<div class="container">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<div class="row">
+	<!-- Contenedor Principal -->
+    <div class="comments-container">
+		<h1>Posts</h1>
+
+		<ul id="comments-list" class="comments-list">
+			
+
+<ul>
+  {% for post in all_post %}
+<div class="card">
+<h6 class="comment-name by-author">{{post.author}}</h6>
+  <h1>{{post.title}}</h1>
+  <p class="title">{{post.content}}</p>
+  <p>Author {{post.author}}</p>
+  <p>Email id: {{post.location}}</p>
+  <p> <a href="{% url 'Devs:postdetail' post.id %}">Comments {{post.comment_set.count}}</a></p>
+
+</div>
+{% endfor %}
+</ul>
+{% endblock %}
