@@ -7,7 +7,7 @@
   width:25%;
   height:600px;
   float:left;
-  background-color:white; 
+  background-color:white;
   margin:25px 15px;
   border-radius:5px;
   padding-top: 15px;
@@ -103,3 +103,7 @@
   box-shadow: 0 0 30px 2px #479F41;
 }
 
+button {
+  margin:0 auto;
+  display:block;
+}
