@@ -61,12 +61,8 @@ def register(request):
     if request.method =="POST":
       form=registrationform(request.POST)
       if form.is_valid():
-          user=form.save()
-          user.refresh_from_db()  # load the profile instance created by the signal
-          user.save()
-          raw_password = form.cleaned_data.get('password1')
-          user1 = authenticate(username=user.username, password=raw_password)
-          login(request, user1)
+          user=form.save() # load the profile instance created by the signa
+         
           return redirect('Devs:posts')
     else :
       form=registrationform()

@@ -10,17 +10,19 @@
 		<h1>Posts</h1>
 
 		<ul id="comments-list" class="comments-list">
-			
+
 
 <ul>
   {% for post in all_post %}
 <div class="card">
-<h6 class="comment-name by-author">{{post.author}}</h6>
+
   <h1>{{post.title}}</h1>
+	<h2 >{{post.author}}</h2>
   <p class="title">{{post.content}}</p>
   <p>Author {{post.author}}</p>
-  <p>Email id: {{post.location}}</p>
-  <p> <a href="{% url 'Devs:postdetail' post.id %}">Comments {{post.comment_set.count}}</a></p>
+  <p>location: {{post.location}}</p>
+
+  <p> <a href="{% url 'Devs:postdetail' post.id %}">Comments ( {{post.comment_set.count}} )</a></p>
 
 </div>
 {% endfor %}

@@ -11,12 +11,12 @@
 	<!-- Contenedor Principal -->
 
 
-        <h1 >{{post.author}}<h6><span>posted on {{post.date}}</span></h6></h1>
+        <h1 >{{post.author}}<h6>posted on {{post.date}}</h6></h1>
 
 
 
       <p>
-        <h2>{{post.title}}:</h2>
+        <h2>Title:{{post.title}}:</h2>
         <h3>{{post.content}}</h3>
       </p>
 
@@ -27,7 +27,7 @@
 
 
 
-<h1> Comments </h1>
+<h1 class="text-primary"> Comments </h1>
 
 
 
@@ -39,8 +39,8 @@
         <!-- Avatar -->
         <div class="comment-box">
           <div class="comment-head">
-            <h6 class="comment-name by-author">{{comment.user1}}</h6>
-            <span>{{comment.date}}</span>
+            <h4 class="comment-name by-author">{{comment.user1}}</h4>
+            <h6 >{{comment.date}}</h6>
 
           </div>
           <div class="comment-content">
@@ -55,10 +55,16 @@
 
 
   {% endfor %}
+  <br>
+  <br>
+
+<div class="btn-group">
+    <button class="btn btn-secondary " >
+
+       <p class="text-white"><a href = "{% url 'Devs:createcomment' post.id %}"><span class="glyphicon glyphicon-log-in"></span> AddComment </a></p></button>
+</div>
 
 
-<p><a href = "{% url 'Devs:createcomment' post.id %}"> AddComment </a></p>
-
-
+</div>
 
 {% endblock %}

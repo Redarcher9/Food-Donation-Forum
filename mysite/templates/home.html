@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'Devs/style.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'Devs/style1.css' %}" />
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -56,7 +55,7 @@
     </ul>
   </div>
 </head>
-<body background="background.jpg">
+
 
 
     </div>
@@ -66,19 +65,26 @@
           no matter how small,
            is ever wasted.
         Volunter Yourself! and be a part of our community</h3>
+        <br>
+        <br><center>
         <div class="btn-group ">
           <a href="{% url 'Devs:register'%}">
             <button class="button btn btn-success "  >Volunteer Up</button>
           </a>
-        </div>
+        </div></center>
       </div>
       <div class="box box2 shadow2">
         <h3>Any Food about to get wasted in your locality?Why not Donate instead!</h3>
+        <br>
+        <br>
+        <br>
+        <center>
         <div class="btn-group text-center">
           <a href="{% url 'Devs:postcreate'%}">
             <button class="btn btn-success btn-block"  >Donate</button>
           </a>
         </div>
+      </center>
       </div>
       <div class="box box3 shadow3">
         <h3>Do you know about any group who is looking for donations?Tell us about them here!</h3>
@@ -86,11 +92,16 @@
 
         </div>
         <div "col-md-3 text-center">
+          <br>
+          <br>
+          <br>
+          <center>
         <div class="btn-group">
           <a href="{% url 'Devs:trustsadd'%}">
             <button class="btn btn-success dropdown-toggle"  >Tell us Here</button>
           </a>
         </div>
+      </center>
       </div>
     </div>
     </div>

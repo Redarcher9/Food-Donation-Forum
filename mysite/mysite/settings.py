@@ -51,7 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
-LOGIN_REDIRECT_URL = 'Devs:home'
+LOGIN_REDIRECT_URL = 'Devs:posts'
 
 TEMPLATES = [
     {
